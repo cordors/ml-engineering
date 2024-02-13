@@ -193,7 +193,7 @@ def require_bnb(test_case):
     Decorator marking a test that requires bitsandbytes
     """
     if not is_bnb_available():
-        return unittest.skip("test requires bitsandbytes from https://github.com/facebookresearch/bitsandbytes")(
+        return unittest.skip("test requires bitsandbytes from https://github.com/TimDettmers/bitsandbytes")(
             test_case
         )
     else:
@@ -205,7 +205,7 @@ def require_bnb_non_decorator():
     Non-Decorator function that would skip a test if bitsandbytes is missing
     """
     if not is_bnb_available():
-        raise SkipTest("Test requires bitsandbytes from https://github.com/facebookresearch/bitsandbytes")
+        raise SkipTest("Test requires bitsandbytes from https://github.com/TimDettmers/bitsandbytes")
 
 
 def set_seed(seed: int = 42):
